@@ -50,7 +50,7 @@ self.addEventListener('install', evt => {
 // activate event
 // eslint-disable-next-line no-restricted-globals
 self.addEventListener('activate', evt => {
-  console.log('service worker activated');
+  console.log('service worker activated', evt);
 });
 
 // fetch event
