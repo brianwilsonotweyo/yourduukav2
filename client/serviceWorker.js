@@ -35,20 +35,26 @@ const assets = [
   "/src/utils.js",
 ];
 
+// install event
 // eslint-disable-next-line no-restricted-globals
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(MyDuuka).then(cache => {
+self.addEventListener('install', evt => {
+  console.log('service worker installed');
+  evt.waitUntil(
+    caches.open(MyDuuka).then((cache) => {
+      console.log('caching shell assets');
       cache.addAll(assets);
     })
   );
 });
 
+// activate event
 // eslint-disable-next-line no-restricted-globals
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request);
-    })
-  );
+self.addEventListener('activate', evt => {
+  console.log('service worker activated');
+});
+
+// fetch event
+// eslint-disable-next-line no-restricted-globals
+self.addEventListener('fetch', evt => {
+  console.log('fetch event', evt);
 });
