@@ -4,7 +4,7 @@ const Header = {
   render: () => {
     const { name,isAdmin } = getUserInfo();
     return ` <div class="container">
-    <a class="navbar-brand logo" href="/#/" style="font-size: 2rem">EDUUKA</a
+    <a class="navbar-brand logo" href="/#/" style="font-size: 2rem">Deppo World</a
     ><button
       data-toggle="collapse"
       class="navbar-toggler"
