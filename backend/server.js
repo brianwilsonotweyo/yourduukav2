@@ -10,7 +10,7 @@ import productRouter from "./routers/productRouter";
 import uploadRouter from "./routers/uploadRouter";
 
 mongoose
-  .connect("mongodb+srv://otweyo:Friday#1@cluster0.bqgmu.mongodb.net/danshop?retryWrites=true&w=majority", {
+  .connect("mongodb+srv://otweyo:Friday#1@cluster0.bqgmu.mongodb.net/DanShop?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
